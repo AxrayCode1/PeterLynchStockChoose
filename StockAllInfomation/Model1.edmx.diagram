@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4392416e172b4d68ad659b9236520b98" Name="Diagram1" ZoomLevel="98" >
+        <EntityTypeShape EntityType="Model1.Stock" Width="1.5" PointX="6.375" PointY="2.5" />
+        <EntityTypeShape EntityType="Model1.AssetsFields" Width="2" PointX="3.125" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.Assets" Width="1.5" PointX="2.875" PointY="3.375" />
+        <EntityTypeShape EntityType="Model1.Session" Width="1.5" PointX="6.375" PointY="5.375" />
+        <AssociationConnector Association="Model1.AssetsAssetsFields" />
+        <AssociationConnector Association="Model1.StockAssets" />
+        <AssociationConnector Association="Model1.SessionAssets" />
+        <EntityTypeShape EntityType="Model1.AssetsFieldsGroup" Width="2" PointX="0.5" PointY="0.5" />
+        <AssociationConnector Association="Model1.AssetsFieldsAssetsFieldsGroup" />
+        <EntityTypeShape EntityType="Model1.Performance" Width="2" PointX="2.875" PointY="6.625" />
+        <EntityTypeShape EntityType="Model1.PerformanceFields" Width="2" PointX="0.5" PointY="7.375" />
+        <AssociationConnector Association="Model1.PerformanceStock" />
+        <AssociationConnector Association="Model1.SessionPerformance" />
+        <EntityTypeShape EntityType="Model1.Month" Width="1.5" PointX="8.375" PointY="3.75" />
+        <EntityTypeShape EntityType="Model1.SaleMonth" Width="1.5" PointX="8.875" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.SaleMonthFields" Width="2.125" PointX="11.125" PointY="0.5" />
+        <AssociationConnector Association="Model1.YearMonthSaleMonth" />
+        <AssociationConnector Association="Model1.SaleMonthFieldsSaleMonth" />
+        <AssociationConnector Association="Model1.StockSaleMonth" />
+        <AssociationConnector Association="Model1.PerformanceFieldsPerformance" />
+        <EntityTypeShape EntityType="Model1.Cash" Width="1.5" PointX="8.5" PointY="8.5" />
+        <EntityTypeShape EntityType="Model1.CashFields" Width="1.5" PointX="8.5" PointY="12" />
+        <AssociationConnector Association="Model1.SessionCash" />
+        <AssociationConnector Association="Model1.CashFieldsCash" />
+        <AssociationConnector Association="Model1.StockCash" />
+        <EntityTypeShape EntityType="Model1.Income" Width="1.5" PointX="6" PointY="8.375" />
+        <EntityTypeShape EntityType="Model1.IncomeFields" Width="1.875" PointX="6" PointY="12" />
+        <EntityTypeShape EntityType="Model1.IncomeFieldGroup" Width="2.125" PointX="2.875" PointY="11.5" />
+        <AssociationConnector Association="Model1.IncomeFieldGroupIncomeFields" />
+        <AssociationConnector Association="Model1.IncomeFieldsIncome" />
+        <AssociationConnector Association="Model1.SessionIncome" />
+        <AssociationConnector Association="Model1.StockIncome" />
+        <EntityTypeShape EntityType="Model1.Year" Width="1.5" PointX="8.375" PointY="5.625" />
+        <EntityTypeShape EntityType="Model1.Dividend" Width="1.5" PointX="11" PointY="3.75" />
+        <EntityTypeShape EntityType="Model1.DivendendFields" Width="2.375" PointX="13.25" PointY="3.75" />
+        <AssociationConnector Association="Model1.StockDividend" />
+        <AssociationConnector Association="Model1.YearDividend" />
+        <AssociationConnector Association="Model1.DivendendFieldsDividend" />
+        <AssociationConnector Association="Model1.YearCash" />
+        <AssociationConnector Association="Model1.YearIncome" />
+        <AssociationConnector Association="Model1.YearSaleMonth" />
+        <AssociationConnector Association="Model1.YearPerformance" />
+        <AssociationConnector Association="Model1.YearAssets" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

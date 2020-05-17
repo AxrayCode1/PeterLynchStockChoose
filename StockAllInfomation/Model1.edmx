@@ -1,0 +1,1411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="StockSet" EntityType="Model1.Store.StockSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AssetsFieldsSet" EntityType="Model1.Store.AssetsFieldsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AssetsSet" EntityType="Model1.Store.AssetsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SessionSet" EntityType="Model1.Store.SessionSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AssetsFieldsGroupSet" EntityType="Model1.Store.AssetsFieldsGroupSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PerformanceSet" EntityType="Model1.Store.PerformanceSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PerformanceFieldsSet" EntityType="Model1.Store.PerformanceFieldsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MonthSet" EntityType="Model1.Store.MonthSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SaleMonthSet" EntityType="Model1.Store.SaleMonthSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SaleMonthFieldsSet" EntityType="Model1.Store.SaleMonthFieldsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CashSet" EntityType="Model1.Store.CashSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CashFieldsSet" EntityType="Model1.Store.CashFieldsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IncomeSet" EntityType="Model1.Store.IncomeSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IncomeFieldsSet" EntityType="Model1.Store.IncomeFieldsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IncomeFieldGroupSet" EntityType="Model1.Store.IncomeFieldGroupSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="YearSet" EntityType="Model1.Store.YearSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DividendSet" EntityType="Model1.Store.DividendSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DivendendFieldsSet" EntityType="Model1.Store.DivendendFieldsSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="AssetsAssetsFields" Association="Model1.Store.AssetsAssetsFields">
+      <End Role="Assets" EntitySet="AssetsSet" />
+      <End Role="AssetsFields" EntitySet="AssetsFieldsSet" />
+    </AssociationSet>
+    <AssociationSet Name="StockAssets" Association="Model1.Store.StockAssets">
+      <End Role="Stock" EntitySet="StockSet" />
+      <End Role="Assets" EntitySet="AssetsSet" />
+    </AssociationSet>
+    <AssociationSet Name="SessionAssets" Association="Model1.Store.SessionAssets">
+      <End Role="Session" EntitySet="SessionSet" />
+      <End Role="Assets" EntitySet="AssetsSet" />
+    </AssociationSet>
+    <AssociationSet Name="AssetsFieldsAssetsFieldsGroup" Association="Model1.Store.AssetsFieldsAssetsFieldsGroup">
+      <End Role="AssetsFields" EntitySet="AssetsFieldsSet" />
+      <End Role="AssetsFieldsGroup" EntitySet="AssetsFieldsGroupSet" />
+    </AssociationSet>
+    <AssociationSet Name="PerformanceStock" Association="Model1.Store.PerformanceStock">
+      <End Role="Performance" EntitySet="PerformanceSet" />
+      <End Role="Stock" EntitySet="StockSet" />
+    </AssociationSet>
+    <AssociationSet Name="SessionPerformance" Association="Model1.Store.SessionPerformance">
+      <End Role="Session" EntitySet="SessionSet" />
+      <End Role="Performance" EntitySet="PerformanceSet" />
+    </AssociationSet>
+    <AssociationSet Name="YearMonthSaleMonth" Association="Model1.Store.YearMonthSaleMonth">
+      <End Role="YearMonth" EntitySet="MonthSet" />
+      <End Role="SaleMonth" EntitySet="SaleMonthSet" />
+    </AssociationSet>
+    <AssociationSet Name="SaleMonthFieldsSaleMonth" Association="Model1.Store.SaleMonthFieldsSaleMonth">
+      <End Role="SaleMonthFields" EntitySet="SaleMonthFieldsSet" />
+      <End Role="SaleMonth" EntitySet="SaleMonthSet" />
+    </AssociationSet>
+    <AssociationSet Name="StockSaleMonth" Association="Model1.Store.StockSaleMonth">
+      <End Role="Stock" EntitySet="StockSet" />
+      <End Role="SaleMonth" EntitySet="SaleMonthSet" />
+    </AssociationSet>
+    <AssociationSet Name="PerformanceFieldsPerformance" Association="Model1.Store.PerformanceFieldsPerformance">
+      <End Role="PerformanceFields" EntitySet="PerformanceFieldsSet" />
+      <End Role="Performance" EntitySet="PerformanceSet" />
+    </AssociationSet>
+    <AssociationSet Name="SessionCash" Association="Model1.Store.SessionCash">
+      <End Role="Session" EntitySet="SessionSet" />
+      <End Role="Cash" EntitySet="CashSet" />
+    </AssociationSet>
+    <AssociationSet Name="CashFieldsCash" Association="Model1.Store.CashFieldsCash">
+      <End Role="CashFields" EntitySet="CashFieldsSet" />
+      <End Role="Cash" EntitySet="CashSet" />
+    </AssociationSet>
+    <AssociationSet Name="StockCash" Association="Model1.Store.StockCash">
+      <End Role="Stock" EntitySet="StockSet" />
+      <End Role="Cash" EntitySet="CashSet" />
+    </AssociationSet>
+    <AssociationSet Name="IncomeFieldGroupIncomeFields" Association="Model1.Store.IncomeFieldGroupIncomeFields">
+      <End Role="IncomeFieldGroup" EntitySet="IncomeFieldGroupSet" />
+      <End Role="IncomeFields" EntitySet="IncomeFieldsSet" />
+    </AssociationSet>
+    <AssociationSet Name="IncomeFieldsIncome" Association="Model1.Store.IncomeFieldsIncome">
+      <End Role="IncomeFields" EntitySet="IncomeFieldsSet" />
+      <End Role="Income" EntitySet="IncomeSet" />
+    </AssociationSet>
+    <AssociationSet Name="SessionIncome" Association="Model1.Store.SessionIncome">
+      <End Role="Session" EntitySet="SessionSet" />
+      <End Role="Income" EntitySet="IncomeSet" />
+    </AssociationSet>
+    <AssociationSet Name="StockIncome" Association="Model1.Store.StockIncome">
+      <End Role="Stock" EntitySet="StockSet" />
+      <End Role="Income" EntitySet="IncomeSet" />
+    </AssociationSet>
+    <AssociationSet Name="StockDividend" Association="Model1.Store.StockDividend">
+      <End Role="Stock" EntitySet="StockSet" />
+      <End Role="Dividend" EntitySet="DividendSet" />
+    </AssociationSet>
+    <AssociationSet Name="YearDividend" Association="Model1.Store.YearDividend">
+      <End Role="Year" EntitySet="YearSet" />
+      <End Role="Dividend" EntitySet="DividendSet" />
+    </AssociationSet>
+    <AssociationSet Name="DivendendFieldsDividend" Association="Model1.Store.DivendendFieldsDividend">
+      <End Role="DivendendFields" EntitySet="DivendendFieldsSet" />
+      <End Role="Dividend" EntitySet="DividendSet" />
+    </AssociationSet>
+    <AssociationSet Name="YearCash" Association="Model1.Store.YearCash">
+      <End Role="Year" EntitySet="YearSet" />
+      <End Role="Cash" EntitySet="CashSet" />
+    </AssociationSet>
+    <AssociationSet Name="YearIncome" Association="Model1.Store.YearIncome">
+      <End Role="Year" EntitySet="YearSet" />
+      <End Role="Income" EntitySet="IncomeSet" />
+    </AssociationSet>
+    <AssociationSet Name="YearSaleMonth" Association="Model1.Store.YearSaleMonth">
+      <End Role="Year" EntitySet="YearSet" />
+      <End Role="SaleMonth" EntitySet="SaleMonthSet" />
+    </AssociationSet>
+    <AssociationSet Name="YearPerformance" Association="Model1.Store.YearPerformance">
+      <End Role="Year" EntitySet="YearSet" />
+      <End Role="Performance" EntitySet="PerformanceSet" />
+    </AssociationSet>
+    <AssociationSet Name="YearAssets" Association="Model1.Store.YearAssets">
+      <End Role="Year" EntitySet="YearSet" />
+      <End Role="Assets" EntitySet="AssetsSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="StockSet">
+    <Key>
+      <PropertyRef Name="idStock" />
+    </Key>
+    <Property Name="idStock" Type="int" Nullable="false" />
+    <Property Name="nameStock" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="isCompany" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AssetsFieldsSet">
+    <Key>
+      <PropertyRef Name="idAssetsField" />
+    </Key>
+    <Property Name="idAssetsField" Type="int" Nullable="false" />
+    <Property Name="nameAssetsField" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="idAssetsFieldGroup" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AssetsSet">
+    <Key>
+      <PropertyRef Name="idAssets" />
+    </Key>
+    <Property Name="idAssets" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idAssetsField" Type="int" Nullable="false" />
+    <Property Name="cost" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="percentage" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="idStock" Type="int" Nullable="false" />
+    <Property Name="idSession" Type="int" Nullable="false" />
+    <Property Name="idYear" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SessionSet">
+    <Key>
+      <PropertyRef Name="idSession" />
+    </Key>
+    <Property Name="idSession" Type="int" Nullable="false" />
+    <Property Name="nameSession" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AssetsFieldsGroupSet">
+    <Key>
+      <PropertyRef Name="idAssetsFieldGroup" />
+    </Key>
+    <Property Name="idAssetsFieldGroup" Type="int" Nullable="false" />
+    <Property Name="nameAssetsFieldGroup" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PerformanceSet">
+    <Key>
+      <PropertyRef Name="idPerformance" />
+    </Key>
+    <Property Name="idPerformance" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idStock" Type="int" Nullable="false" />
+    <Property Name="idSession" Type="int" Nullable="false" />
+    <Property Name="idPeformanceField" Type="int" Nullable="false" />
+    <Property Name="valuePerformance" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="idYear" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PerformanceFieldsSet">
+    <Key>
+      <PropertyRef Name="idPerformanceField" />
+    </Key>
+    <Property Name="idPerformanceField" Type="int" Nullable="false" />
+    <Property Name="namePerformanceField" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MonthSet">
+    <Key>
+      <PropertyRef Name="idMonth" />
+    </Key>
+    <Property Name="idMonth" Type="int" Nullable="false" />
+    <Property Name="nameMonth" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SaleMonthSet">
+    <Key>
+      <PropertyRef Name="idSaleMonth" />
+    </Key>
+    <Property Name="idSaleMonth" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idMonth" Type="int" Nullable="false" />
+    <Property Name="idStock" Type="int" Nullable="false" />
+    <Property Name="idSaleMonthField" Type="int" Nullable="false" />
+    <Property Name="valueSaleMonth" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="idYear" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SaleMonthFieldsSet">
+    <Key>
+      <PropertyRef Name="idSaleMonthField" />
+    </Key>
+    <Property Name="idSaleMonthField" Type="int" Nullable="false" />
+    <Property Name="nameSaleMonthField" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CashSet">
+    <Key>
+      <PropertyRef Name="idCash" />
+    </Key>
+    <Property Name="idCash" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idStock" Type="int" Nullable="false" />
+    <Property Name="idSession" Type="int" Nullable="false" />
+    <Property Name="idCashField" Type="int" Nullable="false" />
+    <Property Name="valueCash" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="idYear" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CashFieldsSet">
+    <Key>
+      <PropertyRef Name="idCashField" />
+    </Key>
+    <Property Name="idCashField" Type="int" Nullable="false" />
+    <Property Name="nameCashField" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IncomeSet">
+    <Key>
+      <PropertyRef Name="idIncome" />
+    </Key>
+    <Property Name="idIncome" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idStock" Type="int" Nullable="false" />
+    <Property Name="idSession" Type="int" Nullable="false" />
+    <Property Name="idIncomeField" Type="int" Nullable="false" />
+    <Property Name="cost" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="percentage" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="idYear" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IncomeFieldsSet">
+    <Key>
+      <PropertyRef Name="idIncomeField" />
+    </Key>
+    <Property Name="idIncomeField" Type="int" Nullable="false" />
+    <Property Name="nameIncomeField" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="idIncomFieldGroup" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IncomeFieldGroupSet">
+    <Key>
+      <PropertyRef Name="idIncomeFieldGroup" />
+    </Key>
+    <Property Name="idIncomeFieldGroup" Type="int" Nullable="false" />
+    <Property Name="nameIncomeFieldGroup" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="YearSet">
+    <Key>
+      <PropertyRef Name="idYear" />
+    </Key>
+    <Property Name="idYear" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nameYear" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DividendSet">
+    <Key>
+      <PropertyRef Name="idDividend" />
+    </Key>
+    <Property Name="idDividend" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idStock" Type="int" Nullable="false" />
+    <Property Name="idYear" Type="int" Nullable="false" />
+    <Property Name="idDividendField" Type="int" Nullable="false" />
+    <Property Name="valueDividend" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DivendendFieldsSet">
+    <Key>
+      <PropertyRef Name="idDividendField" />
+    </Key>
+    <Property Name="idDividendField" Type="int" Nullable="false" />
+    <Property Name="nameDividendField" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="AssetsAssetsFields">
+    <End Role="Assets" Type="Model1.Store.AssetsSet" Multiplicity="*" />
+    <End Role="AssetsFields" Type="Model1.Store.AssetsFieldsSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="AssetsFields">
+        <PropertyRef Name="idAssetsField" />
+      </Principal>
+      <Dependent Role="Assets">
+        <PropertyRef Name="idAssetsField" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StockAssets">
+    <End Role="Stock" Type="Model1.Store.StockSet" Multiplicity="1" />
+    <End Role="Assets" Type="Model1.Store.AssetsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stock">
+        <PropertyRef Name="idStock" />
+      </Principal>
+      <Dependent Role="Assets">
+        <PropertyRef Name="idStock" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SessionAssets">
+    <End Role="Session" Type="Model1.Store.SessionSet" Multiplicity="1" />
+    <End Role="Assets" Type="Model1.Store.AssetsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="idSession" />
+      </Principal>
+      <Dependent Role="Assets">
+        <PropertyRef Name="idSession" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AssetsFieldsAssetsFieldsGroup">
+    <End Role="AssetsFields" Type="Model1.Store.AssetsFieldsSet" Multiplicity="*" />
+    <End Role="AssetsFieldsGroup" Type="Model1.Store.AssetsFieldsGroupSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="AssetsFieldsGroup">
+        <PropertyRef Name="idAssetsFieldGroup" />
+      </Principal>
+      <Dependent Role="AssetsFields">
+        <PropertyRef Name="idAssetsFieldGroup" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PerformanceStock">
+    <End Role="Performance" Type="Model1.Store.PerformanceSet" Multiplicity="*" />
+    <End Role="Stock" Type="Model1.Store.StockSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Stock">
+        <PropertyRef Name="idStock" />
+      </Principal>
+      <Dependent Role="Performance">
+        <PropertyRef Name="idStock" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SessionPerformance">
+    <End Role="Session" Type="Model1.Store.SessionSet" Multiplicity="1" />
+    <End Role="Performance" Type="Model1.Store.PerformanceSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="idSession" />
+      </Principal>
+      <Dependent Role="Performance">
+        <PropertyRef Name="idSession" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="YearMonthSaleMonth">
+    <End Role="YearMonth" Type="Model1.Store.MonthSet" Multiplicity="1" />
+    <End Role="SaleMonth" Type="Model1.Store.SaleMonthSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YearMonth">
+        <PropertyRef Name="idMonth" />
+      </Principal>
+      <Dependent Role="SaleMonth">
+        <PropertyRef Name="idMonth" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SaleMonthFieldsSaleMonth">
+    <End Role="SaleMonthFields" Type="Model1.Store.SaleMonthFieldsSet" Multiplicity="1" />
+    <End Role="SaleMonth" Type="Model1.Store.SaleMonthSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SaleMonthFields">
+        <PropertyRef Name="idSaleMonthField" />
+      </Principal>
+      <Dependent Role="SaleMonth">
+        <PropertyRef Name="idSaleMonthField" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StockSaleMonth">
+    <End Role="Stock" Type="Model1.Store.StockSet" Multiplicity="1" />
+    <End Role="SaleMonth" Type="Model1.Store.SaleMonthSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stock">
+        <PropertyRef Name="idStock" />
+      </Principal>
+      <Dependent Role="SaleMonth">
+        <PropertyRef Name="idStock" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PerformanceFieldsPerformance">
+    <End Role="PerformanceFields" Type="Model1.Store.PerformanceFieldsSet" Multiplicity="1" />
+    <End Role="Performance" Type="Model1.Store.PerformanceSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PerformanceFields">
+        <PropertyRef Name="idPerformanceField" />
+      </Principal>
+      <Dependent Role="Performance">
+        <PropertyRef Name="idPeformanceField" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SessionCash">
+    <End Role="Session" Type="Model1.Store.SessionSet" Multiplicity="1" />
+    <End Role="Cash" Type="Model1.Store.CashSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="idSession" />
+      </Principal>
+      <Dependent Role="Cash">
+        <PropertyRef Name="idSession" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CashFieldsCash">
+    <End Role="CashFields" Type="Model1.Store.CashFieldsSet" Multiplicity="1" />
+    <End Role="Cash" Type="Model1.Store.CashSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CashFields">
+        <PropertyRef Name="idCashField" />
+      </Principal>
+      <Dependent Role="Cash">
+        <PropertyRef Name="idCashField" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StockCash">
+    <End Role="Stock" Type="Model1.Store.StockSet" Multiplicity="1" />
+    <End Role="Cash" Type="Model1.Store.CashSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stock">
+        <PropertyRef Name="idStock" />
+      </Principal>
+      <Dependent Role="Cash">
+        <PropertyRef Name="idStock" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IncomeFieldGroupIncomeFields">
+    <End Role="IncomeFieldGroup" Type="Model1.Store.IncomeFieldGroupSet" Multiplicity="1" />
+    <End Role="IncomeFields" Type="Model1.Store.IncomeFieldsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IncomeFieldGroup">
+        <PropertyRef Name="idIncomeFieldGroup" />
+      </Principal>
+      <Dependent Role="IncomeFields">
+        <PropertyRef Name="idIncomFieldGroup" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IncomeFieldsIncome">
+    <End Role="IncomeFields" Type="Model1.Store.IncomeFieldsSet" Multiplicity="1" />
+    <End Role="Income" Type="Model1.Store.IncomeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IncomeFields">
+        <PropertyRef Name="idIncomeField" />
+      </Principal>
+      <Dependent Role="Income">
+        <PropertyRef Name="idIncomeField" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SessionIncome">
+    <End Role="Session" Type="Model1.Store.SessionSet" Multiplicity="1" />
+    <End Role="Income" Type="Model1.Store.IncomeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="idSession" />
+      </Principal>
+      <Dependent Role="Income">
+        <PropertyRef Name="idSession" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StockIncome">
+    <End Role="Stock" Type="Model1.Store.StockSet" Multiplicity="1" />
+    <End Role="Income" Type="Model1.Store.IncomeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stock">
+        <PropertyRef Name="idStock" />
+      </Principal>
+      <Dependent Role="Income">
+        <PropertyRef Name="idStock" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StockDividend">
+    <End Role="Stock" Type="Model1.Store.StockSet" Multiplicity="1" />
+    <End Role="Dividend" Type="Model1.Store.DividendSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stock">
+        <PropertyRef Name="idStock" />
+      </Principal>
+      <Dependent Role="Dividend">
+        <PropertyRef Name="idStock" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="YearDividend">
+    <End Role="Year" Type="Model1.Store.YearSet" Multiplicity="1" />
+    <End Role="Dividend" Type="Model1.Store.DividendSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="Dividend">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DivendendFieldsDividend">
+    <End Role="DivendendFields" Type="Model1.Store.DivendendFieldsSet" Multiplicity="1" />
+    <End Role="Dividend" Type="Model1.Store.DividendSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DivendendFields">
+        <PropertyRef Name="idDividendField" />
+      </Principal>
+      <Dependent Role="Dividend">
+        <PropertyRef Name="idDividendField" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="YearCash">
+    <End Role="Year" Type="Model1.Store.YearSet" Multiplicity="1" />
+    <End Role="Cash" Type="Model1.Store.CashSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="Cash">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="YearIncome">
+    <End Role="Year" Type="Model1.Store.YearSet" Multiplicity="1" />
+    <End Role="Income" Type="Model1.Store.IncomeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="Income">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="YearSaleMonth">
+    <End Role="Year" Type="Model1.Store.YearSet" Multiplicity="1" />
+    <End Role="SaleMonth" Type="Model1.Store.SaleMonthSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="SaleMonth">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="YearPerformance">
+    <End Role="Year" Type="Model1.Store.YearSet" Multiplicity="1" />
+    <End Role="Performance" Type="Model1.Store.PerformanceSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="Performance">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="YearAssets">
+    <End Role="Year" Type="Model1.Store.YearSet" Multiplicity="1" />
+    <End Role="Assets" Type="Model1.Store.AssetsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="Assets">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="StockSet" EntityType="Model1.Stock" />
+          <EntitySet Name="AssetsFieldsSet" EntityType="Model1.AssetsFields" />
+          <EntitySet Name="AssetsSet" EntityType="Model1.Assets" />
+          <EntitySet Name="SessionSet" EntityType="Model1.Session" />
+          <AssociationSet Name="AssetsAssetsFields" Association="Model1.AssetsAssetsFields">
+            <End Role="Assets" EntitySet="AssetsSet" />
+            <End Role="AssetsFields" EntitySet="AssetsFieldsSet" />
+          </AssociationSet>
+          <AssociationSet Name="StockAssets" Association="Model1.StockAssets">
+            <End Role="Stock" EntitySet="StockSet" />
+            <End Role="Assets" EntitySet="AssetsSet" />
+          </AssociationSet>
+          <AssociationSet Name="SessionAssets" Association="Model1.SessionAssets">
+            <End Role="Session" EntitySet="SessionSet" />
+            <End Role="Assets" EntitySet="AssetsSet" />
+          </AssociationSet>
+          <EntitySet Name="AssetsFieldsGroupSet" EntityType="Model1.AssetsFieldsGroup" />
+          <AssociationSet Name="AssetsFieldsAssetsFieldsGroup" Association="Model1.AssetsFieldsAssetsFieldsGroup">
+            <End Role="AssetsFields" EntitySet="AssetsFieldsSet" />
+            <End Role="AssetsFieldsGroup" EntitySet="AssetsFieldsGroupSet" />
+          </AssociationSet>
+          <EntitySet Name="PerformanceSet" EntityType="Model1.Performance" />
+          <EntitySet Name="PerformanceFieldsSet" EntityType="Model1.PerformanceFields" />
+          <AssociationSet Name="PerformanceStock" Association="Model1.PerformanceStock">
+            <End Role="Performance" EntitySet="PerformanceSet" />
+            <End Role="Stock" EntitySet="StockSet" />
+          </AssociationSet>
+          <AssociationSet Name="SessionPerformance" Association="Model1.SessionPerformance">
+            <End Role="Session" EntitySet="SessionSet" />
+            <End Role="Performance" EntitySet="PerformanceSet" />
+          </AssociationSet>
+          <EntitySet Name="MonthSet" EntityType="Model1.Month" />
+          <EntitySet Name="SaleMonthSet" EntityType="Model1.SaleMonth" />
+          <EntitySet Name="SaleMonthFieldsSet" EntityType="Model1.SaleMonthFields" />
+          <AssociationSet Name="YearMonthSaleMonth" Association="Model1.YearMonthSaleMonth">
+            <End Role="YearMonth" EntitySet="MonthSet" />
+            <End Role="SaleMonth" EntitySet="SaleMonthSet" />
+          </AssociationSet>
+          <AssociationSet Name="SaleMonthFieldsSaleMonth" Association="Model1.SaleMonthFieldsSaleMonth">
+            <End Role="SaleMonthFields" EntitySet="SaleMonthFieldsSet" />
+            <End Role="SaleMonth" EntitySet="SaleMonthSet" />
+          </AssociationSet>
+          <AssociationSet Name="StockSaleMonth" Association="Model1.StockSaleMonth">
+            <End Role="Stock" EntitySet="StockSet" />
+            <End Role="SaleMonth" EntitySet="SaleMonthSet" />
+          </AssociationSet>
+          <AssociationSet Name="PerformanceFieldsPerformance" Association="Model1.PerformanceFieldsPerformance">
+            <End Role="PerformanceFields" EntitySet="PerformanceFieldsSet" />
+            <End Role="Performance" EntitySet="PerformanceSet" />
+          </AssociationSet>
+          <EntitySet Name="CashSet" EntityType="Model1.Cash" />
+          <EntitySet Name="CashFieldsSet" EntityType="Model1.CashFields" />
+          <AssociationSet Name="SessionCash" Association="Model1.SessionCash">
+            <End Role="Session" EntitySet="SessionSet" />
+            <End Role="Cash" EntitySet="CashSet" />
+          </AssociationSet>
+          <AssociationSet Name="CashFieldsCash" Association="Model1.CashFieldsCash">
+            <End Role="CashFields" EntitySet="CashFieldsSet" />
+            <End Role="Cash" EntitySet="CashSet" />
+          </AssociationSet>
+          <AssociationSet Name="StockCash" Association="Model1.StockCash">
+            <End Role="Stock" EntitySet="StockSet" />
+            <End Role="Cash" EntitySet="CashSet" />
+          </AssociationSet>
+          <EntitySet Name="IncomeSet" EntityType="Model1.Income" />
+          <EntitySet Name="IncomeFieldsSet" EntityType="Model1.IncomeFields" />
+          <EntitySet Name="IncomeFieldGroupSet" EntityType="Model1.IncomeFieldGroup" />
+          <AssociationSet Name="IncomeFieldGroupIncomeFields" Association="Model1.IncomeFieldGroupIncomeFields">
+            <End Role="IncomeFieldGroup" EntitySet="IncomeFieldGroupSet" />
+            <End Role="IncomeFields" EntitySet="IncomeFieldsSet" />
+          </AssociationSet>
+          <AssociationSet Name="IncomeFieldsIncome" Association="Model1.IncomeFieldsIncome">
+            <End Role="IncomeFields" EntitySet="IncomeFieldsSet" />
+            <End Role="Income" EntitySet="IncomeSet" />
+          </AssociationSet>
+          <AssociationSet Name="SessionIncome" Association="Model1.SessionIncome">
+            <End Role="Session" EntitySet="SessionSet" />
+            <End Role="Income" EntitySet="IncomeSet" />
+          </AssociationSet>
+          <AssociationSet Name="StockIncome" Association="Model1.StockIncome">
+            <End Role="Stock" EntitySet="StockSet" />
+            <End Role="Income" EntitySet="IncomeSet" />
+          </AssociationSet>
+          <EntitySet Name="YearSet" EntityType="Model1.Year" />
+          <EntitySet Name="DividendSet" EntityType="Model1.Dividend" />
+          <EntitySet Name="DivendendFieldsSet" EntityType="Model1.DivendendFields" />
+          <AssociationSet Name="StockDividend" Association="Model1.StockDividend">
+            <End Role="Stock" EntitySet="StockSet" />
+            <End Role="Dividend" EntitySet="DividendSet" />
+          </AssociationSet>
+          <AssociationSet Name="YearDividend" Association="Model1.YearDividend">
+            <End Role="Year" EntitySet="YearSet" />
+            <End Role="Dividend" EntitySet="DividendSet" />
+          </AssociationSet>
+          <AssociationSet Name="DivendendFieldsDividend" Association="Model1.DivendendFieldsDividend">
+            <End Role="DivendendFields" EntitySet="DivendendFieldsSet" />
+            <End Role="Dividend" EntitySet="DividendSet" />
+          </AssociationSet>
+          <AssociationSet Name="YearCash" Association="Model1.YearCash">
+            <End Role="Year" EntitySet="YearSet" />
+            <End Role="Cash" EntitySet="CashSet" />
+          </AssociationSet>
+          <AssociationSet Name="YearIncome" Association="Model1.YearIncome">
+            <End Role="Year" EntitySet="YearSet" />
+            <End Role="Income" EntitySet="IncomeSet" />
+          </AssociationSet>
+          <AssociationSet Name="YearSaleMonth" Association="Model1.YearSaleMonth">
+            <End Role="Year" EntitySet="YearSet" />
+            <End Role="SaleMonth" EntitySet="SaleMonthSet" />
+          </AssociationSet>
+          <AssociationSet Name="YearPerformance" Association="Model1.YearPerformance">
+            <End Role="Year" EntitySet="YearSet" />
+            <End Role="Performance" EntitySet="PerformanceSet" />
+          </AssociationSet>
+          <AssociationSet Name="YearAssets" Association="Model1.YearAssets">
+            <End Role="Year" EntitySet="YearSet" />
+            <End Role="Assets" EntitySet="AssetsSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Stock">
+          <Key>
+            <PropertyRef Name="idStock" />
+          </Key>
+          <Property Name="idStock" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="nameStock" Type="String" Nullable="false" />
+          <NavigationProperty Name="Assets" Relationship="Model1.StockAssets" FromRole="Stock" ToRole="Assets" />
+          <NavigationProperty Name="Performance" Relationship="Model1.PerformanceStock" FromRole="Stock" ToRole="Performance" />
+          <NavigationProperty Name="SaleMonth" Relationship="Model1.StockSaleMonth" FromRole="Stock" ToRole="SaleMonth" />
+          <NavigationProperty Name="Cash" Relationship="Model1.StockCash" FromRole="Stock" ToRole="Cash" />
+          <NavigationProperty Name="Income" Relationship="Model1.StockIncome" FromRole="Stock" ToRole="Income" />
+          <NavigationProperty Name="Dividend" Relationship="Model1.StockDividend" FromRole="Stock" ToRole="Dividend" />
+          <Property Name="isCompany" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AssetsFields">
+          <Key>
+            <PropertyRef Name="idAssetsField" />
+          </Key>
+          <Property Name="idAssetsField" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="nameAssetsField" Type="String" Nullable="false" />
+          <NavigationProperty Name="Assets" Relationship="Model1.AssetsAssetsFields" FromRole="AssetsFields" ToRole="Assets" />
+          <Property Name="idAssetsFieldGroup" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AssetsFieldsGroup" Relationship="Model1.AssetsFieldsAssetsFieldsGroup" FromRole="AssetsFields" ToRole="AssetsFieldsGroup" />
+        </EntityType>
+        <EntityType Name="Assets">
+          <Key>
+            <PropertyRef Name="idAssets" />
+          </Key>
+          <Property Name="idAssets" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idAssetsField" Type="Int32" Nullable="false" />
+          <Property Name="cost" Type="String" Nullable="true" />
+          <Property Name="percentage" Type="String" Nullable="true" />
+          <NavigationProperty Name="AssetsFields" Relationship="Model1.AssetsAssetsFields" FromRole="Assets" ToRole="AssetsFields" />
+          <Property Name="idStock" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Stock" Relationship="Model1.StockAssets" FromRole="Assets" ToRole="Stock" />
+          <Property Name="idSession" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Session" Relationship="Model1.SessionAssets" FromRole="Assets" ToRole="Session" />
+          <Property Name="idYear" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Year" Relationship="Model1.YearAssets" FromRole="Assets" ToRole="Year" />
+        </EntityType>
+        <EntityType Name="Session">
+          <Key>
+            <PropertyRef Name="idSession" />
+          </Key>
+          <Property Name="idSession" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="nameSession" Type="String" Nullable="false" />
+          <NavigationProperty Name="Assets" Relationship="Model1.SessionAssets" FromRole="Session" ToRole="Assets" />
+          <NavigationProperty Name="Performance" Relationship="Model1.SessionPerformance" FromRole="Session" ToRole="Performance" />
+          <NavigationProperty Name="Cash" Relationship="Model1.SessionCash" FromRole="Session" ToRole="Cash" />
+          <NavigationProperty Name="Income" Relationship="Model1.SessionIncome" FromRole="Session" ToRole="Income" />
+        </EntityType>
+        <Association Name="AssetsAssetsFields">
+          <End Type="Model1.Assets" Role="Assets" Multiplicity="*" />
+          <End Type="Model1.AssetsFields" Role="AssetsFields" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="AssetsFields">
+              <PropertyRef Name="idAssetsField" />
+            </Principal>
+            <Dependent Role="Assets">
+              <PropertyRef Name="idAssetsField" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="StockAssets">
+          <End Type="Model1.Stock" Role="Stock" Multiplicity="1" >
+          </End>
+          <End Type="Model1.Assets" Role="Assets" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="idStock" />
+            </Principal>
+            <Dependent Role="Assets">
+              <PropertyRef Name="idStock" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SessionAssets">
+          <End Type="Model1.Session" Role="Session" Multiplicity="1" />
+          <End Type="Model1.Assets" Role="Assets" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Session">
+              <PropertyRef Name="idSession" />
+            </Principal>
+            <Dependent Role="Assets">
+              <PropertyRef Name="idSession" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AssetsFieldsGroup">
+          <Key>
+            <PropertyRef Name="idAssetsFieldGroup" />
+          </Key>
+          <Property Name="idAssetsFieldGroup" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="nameAssetsFieldGroup" Type="String" Nullable="false" />
+          <NavigationProperty Name="AssetsFields" Relationship="Model1.AssetsFieldsAssetsFieldsGroup" FromRole="AssetsFieldsGroup" ToRole="AssetsFields" />
+        </EntityType>
+        <Association Name="AssetsFieldsAssetsFieldsGroup">
+          <End Type="Model1.AssetsFields" Role="AssetsFields" Multiplicity="*" />
+          <End Type="Model1.AssetsFieldsGroup" Role="AssetsFieldsGroup" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="AssetsFieldsGroup">
+              <PropertyRef Name="idAssetsFieldGroup" />
+            </Principal>
+            <Dependent Role="AssetsFields">
+              <PropertyRef Name="idAssetsFieldGroup" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Performance">
+          <Key>
+            <PropertyRef Name="idPerformance" />
+          </Key>
+          <Property Name="idPerformance" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idStock" Type="Int32" Nullable="false" />
+          <Property Name="idSession" Type="Int32" Nullable="false" />
+          <Property Name="idPeformanceField" Type="Int32" Nullable="false" />
+          <Property Name="valuePerformance" Type="String" Nullable="false" />
+          <NavigationProperty Name="Stock" Relationship="Model1.PerformanceStock" FromRole="Performance" ToRole="Stock" />
+          <NavigationProperty Name="Session" Relationship="Model1.SessionPerformance" FromRole="Performance" ToRole="Session" />
+          <NavigationProperty Name="PerformanceFields" Relationship="Model1.PerformanceFieldsPerformance" FromRole="Performance" ToRole="PerformanceFields" />
+          <Property Name="idYear" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Year" Relationship="Model1.YearPerformance" FromRole="Performance" ToRole="Year" />
+        </EntityType>
+        <EntityType Name="PerformanceFields">
+          <Key>
+            <PropertyRef Name="idPerformanceField" />
+          </Key>
+          <Property Name="idPerformanceField" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="namePerformanceField" Type="String" Nullable="false" />
+          <NavigationProperty Name="Performance" Relationship="Model1.PerformanceFieldsPerformance" FromRole="PerformanceFields" ToRole="Performance" />
+        </EntityType>
+        <Association Name="PerformanceStock">
+          <End Type="Model1.Performance" Role="Performance" Multiplicity="*" />
+          <End Type="Model1.Stock" Role="Stock" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="idStock" />
+            </Principal>
+            <Dependent Role="Performance">
+              <PropertyRef Name="idStock" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SessionPerformance">
+          <End Type="Model1.Session" Role="Session" Multiplicity="1" />
+          <End Type="Model1.Performance" Role="Performance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Session">
+              <PropertyRef Name="idSession" />
+            </Principal>
+            <Dependent Role="Performance">
+              <PropertyRef Name="idSession" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Month">
+          <Key>
+            <PropertyRef Name="idMonth" />
+          </Key>
+          <Property Name="idMonth" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="nameMonth" Type="String" Nullable="false" />
+          <NavigationProperty Name="SaleMonth" Relationship="Model1.YearMonthSaleMonth" FromRole="YearMonth" ToRole="SaleMonth" />
+        </EntityType>
+        <EntityType Name="SaleMonth">
+          <Key>
+            <PropertyRef Name="idSaleMonth" />
+          </Key>
+          <Property Name="idSaleMonth" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idMonth" Type="Int32" Nullable="false" />
+          <Property Name="idStock" Type="Int32" Nullable="false" />
+          <Property Name="idSaleMonthField" Type="Int32" Nullable="false" />
+          <Property Name="valueSaleMonth" Type="String" Nullable="false" />
+          <NavigationProperty Name="YearMonth" Relationship="Model1.YearMonthSaleMonth" FromRole="SaleMonth" ToRole="YearMonth" />
+          <NavigationProperty Name="SaleMonthFields" Relationship="Model1.SaleMonthFieldsSaleMonth" FromRole="SaleMonth" ToRole="SaleMonthFields" />
+          <NavigationProperty Name="Stock" Relationship="Model1.StockSaleMonth" FromRole="SaleMonth" ToRole="Stock" />
+          <Property Name="idYear" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Year" Relationship="Model1.YearSaleMonth" FromRole="SaleMonth" ToRole="Year" />
+        </EntityType>
+        <EntityType Name="SaleMonthFields">
+          <Key>
+            <PropertyRef Name="idSaleMonthField" />
+          </Key>
+          <Property Name="idSaleMonthField" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="nameSaleMonthField" Type="String" Nullable="false" />
+          <NavigationProperty Name="SaleMonth" Relationship="Model1.SaleMonthFieldsSaleMonth" FromRole="SaleMonthFields" ToRole="SaleMonth" />
+        </EntityType>
+        <Association Name="YearMonthSaleMonth">
+          <End Type="Model1.Month" Role="YearMonth" Multiplicity="1" />
+          <End Type="Model1.SaleMonth" Role="SaleMonth" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="YearMonth">
+              <PropertyRef Name="idMonth" />
+            </Principal>
+            <Dependent Role="SaleMonth">
+              <PropertyRef Name="idMonth" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SaleMonthFieldsSaleMonth">
+          <End Type="Model1.SaleMonthFields" Role="SaleMonthFields" Multiplicity="1" />
+          <End Type="Model1.SaleMonth" Role="SaleMonth" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaleMonthFields">
+              <PropertyRef Name="idSaleMonthField" />
+            </Principal>
+            <Dependent Role="SaleMonth">
+              <PropertyRef Name="idSaleMonthField" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="StockSaleMonth">
+          <End Type="Model1.Stock" Role="Stock" Multiplicity="1" />
+          <End Type="Model1.SaleMonth" Role="SaleMonth" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="idStock" />
+            </Principal>
+            <Dependent Role="SaleMonth">
+              <PropertyRef Name="idStock" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PerformanceFieldsPerformance">
+          <End Type="Model1.PerformanceFields" Role="PerformanceFields" Multiplicity="1" />
+          <End Type="Model1.Performance" Role="Performance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PerformanceFields">
+              <PropertyRef Name="idPerformanceField" />
+            </Principal>
+            <Dependent Role="Performance">
+              <PropertyRef Name="idPeformanceField" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Cash">
+          <Key>
+            <PropertyRef Name="idCash" />
+          </Key>
+          <Property Name="idCash" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idStock" Type="Int32" Nullable="false" />
+          <Property Name="idSession" Type="Int32" Nullable="false" />
+          <Property Name="idCashField" Type="Int32" Nullable="false" />
+          <Property Name="valueCash" Type="String" Nullable="false" />
+          <NavigationProperty Name="Session" Relationship="Model1.SessionCash" FromRole="Cash" ToRole="Session" />
+          <NavigationProperty Name="CashFields" Relationship="Model1.CashFieldsCash" FromRole="Cash" ToRole="CashFields" />
+          <NavigationProperty Name="Stock" Relationship="Model1.StockCash" FromRole="Cash" ToRole="Stock" />
+          <Property Name="idYear" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Year" Relationship="Model1.YearCash" FromRole="Cash" ToRole="Year" />
+        </EntityType>
+        <EntityType Name="CashFields">
+          <Key>
+            <PropertyRef Name="idCashField" />
+          </Key>
+          <Property Name="idCashField" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="nameCashField" Type="String" Nullable="false" />
+          <NavigationProperty Name="Cash" Relationship="Model1.CashFieldsCash" FromRole="CashFields" ToRole="Cash" />
+        </EntityType>
+        <Association Name="SessionCash">
+          <End Type="Model1.Session" Role="Session" Multiplicity="1" />
+          <End Type="Model1.Cash" Role="Cash" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Session">
+              <PropertyRef Name="idSession" />
+            </Principal>
+            <Dependent Role="Cash">
+              <PropertyRef Name="idSession" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CashFieldsCash">
+          <End Type="Model1.CashFields" Role="CashFields" Multiplicity="1" />
+          <End Type="Model1.Cash" Role="Cash" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CashFields">
+              <PropertyRef Name="idCashField" />
+            </Principal>
+            <Dependent Role="Cash">
+              <PropertyRef Name="idCashField" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="StockCash">
+          <End Type="Model1.Stock" Role="Stock" Multiplicity="1" />
+          <End Type="Model1.Cash" Role="Cash" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="idStock" />
+            </Principal>
+            <Dependent Role="Cash">
+              <PropertyRef Name="idStock" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Income">
+          <Key>
+            <PropertyRef Name="idIncome" />
+          </Key>
+          <Property Name="idIncome" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idStock" Type="Int32" Nullable="false" />
+          <Property Name="idSession" Type="Int32" Nullable="false" />
+          <Property Name="idIncomeField" Type="Int32" Nullable="false" />
+          <Property Name="cost" Type="String" Nullable="false" />
+          <Property Name="percentage" Type="String" Nullable="false" />
+          <NavigationProperty Name="IncomeFields" Relationship="Model1.IncomeFieldsIncome" FromRole="Income" ToRole="IncomeFields" />
+          <NavigationProperty Name="Session" Relationship="Model1.SessionIncome" FromRole="Income" ToRole="Session" />
+          <NavigationProperty Name="Stock" Relationship="Model1.StockIncome" FromRole="Income" ToRole="Stock" />
+          <Property Name="idYear" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Year" Relationship="Model1.YearIncome" FromRole="Income" ToRole="Year" />
+        </EntityType>
+        <EntityType Name="IncomeFields">
+          <Key>
+            <PropertyRef Name="idIncomeField" />
+          </Key>
+          <Property Name="idIncomeField" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="nameIncomeField" Type="String" Nullable="false" />
+          <Property Name="idIncomFieldGroup" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="IncomeFieldGroup" Relationship="Model1.IncomeFieldGroupIncomeFields" FromRole="IncomeFields" ToRole="IncomeFieldGroup" />
+          <NavigationProperty Name="Income" Relationship="Model1.IncomeFieldsIncome" FromRole="IncomeFields" ToRole="Income" />
+        </EntityType>
+        <EntityType Name="IncomeFieldGroup">
+          <Key>
+            <PropertyRef Name="idIncomeFieldGroup" />
+          </Key>
+          <Property Name="idIncomeFieldGroup" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="nameIncomeFieldGroup" Type="String" Nullable="false" />
+          <NavigationProperty Name="IncomeFields" Relationship="Model1.IncomeFieldGroupIncomeFields" FromRole="IncomeFieldGroup" ToRole="IncomeFields" />
+        </EntityType>
+        <Association Name="IncomeFieldGroupIncomeFields">
+          <End Type="Model1.IncomeFieldGroup" Role="IncomeFieldGroup" Multiplicity="1" />
+          <End Type="Model1.IncomeFields" Role="IncomeFields" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IncomeFieldGroup">
+              <PropertyRef Name="idIncomeFieldGroup" />
+            </Principal>
+            <Dependent Role="IncomeFields">
+              <PropertyRef Name="idIncomFieldGroup" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IncomeFieldsIncome">
+          <End Type="Model1.IncomeFields" Role="IncomeFields" Multiplicity="1" />
+          <End Type="Model1.Income" Role="Income" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IncomeFields">
+              <PropertyRef Name="idIncomeField" />
+            </Principal>
+            <Dependent Role="Income">
+              <PropertyRef Name="idIncomeField" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SessionIncome">
+          <End Type="Model1.Session" Role="Session" Multiplicity="1" />
+          <End Type="Model1.Income" Role="Income" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Session">
+              <PropertyRef Name="idSession" />
+            </Principal>
+            <Dependent Role="Income">
+              <PropertyRef Name="idSession" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="StockIncome">
+          <End Type="Model1.Stock" Role="Stock" Multiplicity="1" />
+          <End Type="Model1.Income" Role="Income" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="idStock" />
+            </Principal>
+            <Dependent Role="Income">
+              <PropertyRef Name="idStock" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Year">
+          <Key>
+            <PropertyRef Name="idYear" />
+          </Key>
+          <Property Name="idYear" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nameYear" Type="String" Nullable="false" />
+          <NavigationProperty Name="Dividend" Relationship="Model1.YearDividend" FromRole="Year" ToRole="Dividend" />
+          <NavigationProperty Name="Cash" Relationship="Model1.YearCash" FromRole="Year" ToRole="Cash" />
+          <NavigationProperty Name="Income" Relationship="Model1.YearIncome" FromRole="Year" ToRole="Income" />
+          <NavigationProperty Name="SaleMonth" Relationship="Model1.YearSaleMonth" FromRole="Year" ToRole="SaleMonth" />
+          <NavigationProperty Name="Performance" Relationship="Model1.YearPerformance" FromRole="Year" ToRole="Performance" />
+          <NavigationProperty Name="Assets" Relationship="Model1.YearAssets" FromRole="Year" ToRole="Assets" />
+        </EntityType>
+        <EntityType Name="Dividend">
+          <Key>
+            <PropertyRef Name="idDividend" />
+          </Key>
+          <Property Name="idDividend" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idStock" Type="Int32" Nullable="false" />
+          <Property Name="idYear" Type="Int32" Nullable="false" />
+          <Property Name="idDividendField" Type="Int32" Nullable="false" />
+          <Property Name="valueDividend" Type="String" Nullable="false" />
+          <NavigationProperty Name="Stock" Relationship="Model1.StockDividend" FromRole="Dividend" ToRole="Stock" />
+          <NavigationProperty Name="Year" Relationship="Model1.YearDividend" FromRole="Dividend" ToRole="Year" />
+          <NavigationProperty Name="DivendendFields" Relationship="Model1.DivendendFieldsDividend" FromRole="Dividend" ToRole="DivendendFields" />
+        </EntityType>
+        <EntityType Name="DivendendFields">
+          <Key>
+            <PropertyRef Name="idDividendField" />
+          </Key>
+          <Property Name="idDividendField" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="nameDividendField" Type="String" Nullable="false" />
+          <NavigationProperty Name="Dividend" Relationship="Model1.DivendendFieldsDividend" FromRole="DivendendFields" ToRole="Dividend" />
+        </EntityType>
+        <Association Name="StockDividend">
+          <End Type="Model1.Stock" Role="Stock" Multiplicity="1" />
+          <End Type="Model1.Dividend" Role="Dividend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="idStock" />
+            </Principal>
+            <Dependent Role="Dividend">
+              <PropertyRef Name="idStock" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="YearDividend">
+          <End Type="Model1.Year" Role="Year" Multiplicity="1" />
+          <End Type="Model1.Dividend" Role="Dividend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="idYear" />
+            </Principal>
+            <Dependent Role="Dividend">
+              <PropertyRef Name="idYear" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DivendendFieldsDividend">
+          <End Type="Model1.DivendendFields" Role="DivendendFields" Multiplicity="1" />
+          <End Type="Model1.Dividend" Role="Dividend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DivendendFields">
+              <PropertyRef Name="idDividendField" />
+            </Principal>
+            <Dependent Role="Dividend">
+              <PropertyRef Name="idDividendField" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="YearCash">
+          <End Type="Model1.Year" Role="Year" Multiplicity="1" />
+          <End Type="Model1.Cash" Role="Cash" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="idYear" />
+            </Principal>
+            <Dependent Role="Cash">
+              <PropertyRef Name="idYear" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="YearIncome">
+          <End Type="Model1.Year" Role="Year" Multiplicity="1" />
+          <End Type="Model1.Income" Role="Income" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="idYear" />
+            </Principal>
+            <Dependent Role="Income">
+              <PropertyRef Name="idYear" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="YearSaleMonth">
+          <End Type="Model1.Year" Role="Year" Multiplicity="1" />
+          <End Type="Model1.SaleMonth" Role="SaleMonth" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="idYear" />
+            </Principal>
+            <Dependent Role="SaleMonth">
+              <PropertyRef Name="idYear" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="YearPerformance">
+          <End Type="Model1.Year" Role="Year" Multiplicity="1" />
+          <End Type="Model1.Performance" Role="Performance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="idYear" />
+            </Principal>
+            <Dependent Role="Performance">
+              <PropertyRef Name="idYear" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="YearAssets">
+          <End Type="Model1.Year" Role="Year" Multiplicity="1" />
+          <End Type="Model1.Assets" Role="Assets" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="idYear" />
+            </Principal>
+            <Dependent Role="Assets">
+              <PropertyRef Name="idYear" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="StockSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Stock)">
+        <MappingFragment StoreEntitySet="StockSet">
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="nameStock" ColumnName="nameStock" />
+          <ScalarProperty Name="isCompany" ColumnName="isCompany" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetsFieldsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AssetsFields)">
+        <MappingFragment StoreEntitySet="AssetsFieldsSet">
+          <ScalarProperty Name="idAssetsField" ColumnName="idAssetsField" />
+          <ScalarProperty Name="nameAssetsField" ColumnName="nameAssetsField" />
+          <ScalarProperty Name="idAssetsFieldGroup" ColumnName="idAssetsFieldGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Assets)">
+        <MappingFragment StoreEntitySet="AssetsSet">
+          <ScalarProperty Name="idAssets" ColumnName="idAssets" />
+          <ScalarProperty Name="idAssetsField" ColumnName="idAssetsField" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="percentage" ColumnName="percentage" />
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="idSession" ColumnName="idSession" />
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SessionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Session)">
+        <MappingFragment StoreEntitySet="SessionSet">
+          <ScalarProperty Name="idSession" ColumnName="idSession" />
+          <ScalarProperty Name="nameSession" ColumnName="nameSession" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetsFieldsGroupSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AssetsFieldsGroup)">
+        <MappingFragment StoreEntitySet="AssetsFieldsGroupSet">
+          <ScalarProperty Name="idAssetsFieldGroup" ColumnName="idAssetsFieldGroup" />
+          <ScalarProperty Name="nameAssetsFieldGroup" ColumnName="nameAssetsFieldGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PerformanceSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Performance)">
+        <MappingFragment StoreEntitySet="PerformanceSet">
+          <ScalarProperty Name="idPerformance" ColumnName="idPerformance" />
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="idSession" ColumnName="idSession" />
+          <ScalarProperty Name="idPeformanceField" ColumnName="idPeformanceField" />
+          <ScalarProperty Name="valuePerformance" ColumnName="valuePerformance" />
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PerformanceFieldsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.PerformanceFields)">
+        <MappingFragment StoreEntitySet="PerformanceFieldsSet">
+          <ScalarProperty Name="idPerformanceField" ColumnName="idPerformanceField" />
+          <ScalarProperty Name="namePerformanceField" ColumnName="namePerformanceField" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MonthSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Month)">
+        <MappingFragment StoreEntitySet="MonthSet">
+          <ScalarProperty Name="idMonth" ColumnName="idMonth" />
+          <ScalarProperty Name="nameMonth" ColumnName="nameMonth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleMonthSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.SaleMonth)">
+        <MappingFragment StoreEntitySet="SaleMonthSet">
+          <ScalarProperty Name="idSaleMonth" ColumnName="idSaleMonth" />
+          <ScalarProperty Name="idMonth" ColumnName="idMonth" />
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="idSaleMonthField" ColumnName="idSaleMonthField" />
+          <ScalarProperty Name="valueSaleMonth" ColumnName="valueSaleMonth" />
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleMonthFieldsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.SaleMonthFields)">
+        <MappingFragment StoreEntitySet="SaleMonthFieldsSet">
+          <ScalarProperty Name="idSaleMonthField" ColumnName="idSaleMonthField" />
+          <ScalarProperty Name="nameSaleMonthField" ColumnName="nameSaleMonthField" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Cash)">
+        <MappingFragment StoreEntitySet="CashSet">
+          <ScalarProperty Name="idCash" ColumnName="idCash" />
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="idSession" ColumnName="idSession" />
+          <ScalarProperty Name="idCashField" ColumnName="idCashField" />
+          <ScalarProperty Name="valueCash" ColumnName="valueCash" />
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashFieldsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.CashFields)">
+        <MappingFragment StoreEntitySet="CashFieldsSet">
+          <ScalarProperty Name="idCashField" ColumnName="idCashField" />
+          <ScalarProperty Name="nameCashField" ColumnName="nameCashField" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncomeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Income)">
+        <MappingFragment StoreEntitySet="IncomeSet">
+          <ScalarProperty Name="idIncome" ColumnName="idIncome" />
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="idSession" ColumnName="idSession" />
+          <ScalarProperty Name="idIncomeField" ColumnName="idIncomeField" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="percentage" ColumnName="percentage" />
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncomeFieldsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.IncomeFields)">
+        <MappingFragment StoreEntitySet="IncomeFieldsSet">
+          <ScalarProperty Name="idIncomeField" ColumnName="idIncomeField" />
+          <ScalarProperty Name="nameIncomeField" ColumnName="nameIncomeField" />
+          <ScalarProperty Name="idIncomFieldGroup" ColumnName="idIncomFieldGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncomeFieldGroupSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.IncomeFieldGroup)">
+        <MappingFragment StoreEntitySet="IncomeFieldGroupSet">
+          <ScalarProperty Name="idIncomeFieldGroup" ColumnName="idIncomeFieldGroup" />
+          <ScalarProperty Name="nameIncomeFieldGroup" ColumnName="nameIncomeFieldGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YearSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Year)">
+        <MappingFragment StoreEntitySet="YearSet">
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+          <ScalarProperty Name="nameYear" ColumnName="nameYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DividendSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Dividend)">
+        <MappingFragment StoreEntitySet="DividendSet">
+          <ScalarProperty Name="idDividend" ColumnName="idDividend" />
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+          <ScalarProperty Name="idDividendField" ColumnName="idDividendField" />
+          <ScalarProperty Name="valueDividend" ColumnName="valueDividend" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DivendendFieldsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.DivendendFields)">
+        <MappingFragment StoreEntitySet="DivendendFieldsSet">
+          <ScalarProperty Name="idDividendField" ColumnName="idDividendField" />
+          <ScalarProperty Name="nameDividendField" ColumnName="nameDividendField" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

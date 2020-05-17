@@ -1,0 +1,82 @@
+# -*- encoding: utf8-*-
+import requests
+import os
+import random
+import time
+from bs4 import BeautifulSoup
+os.chdir(r'.')
+httpuseragent=["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246","Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36","Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1","Mozilla/5.0 (Linux; Android 7.0; Pixel C Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.98 Safari/537.36","Mozilla/5.0 (Linux; Android 6.0.1; SGP771 Build/32.2.A.0.253; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.98 Safari/537.36","Mozilla/5.0 (Linux; Android 6.0.1; SHIELD Tablet K1 Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Safari/537.36"]
+randomAgent = random.choice(httpuseragent)
+print(randomAgent)
+#headers = {'User-Agent':'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36'}
+headers = {'User-Agent':randomAgent}
+fp = open('host1.txt','r')
+ips = fp.readlines()
+proxys = list()
+for p in ips:
+    ip =p.strip('\r\n')
+    proxy = 'https://' +  ip
+    proxies = {'https':proxy}
+    proxys.append(proxies)
+fp.close()
+a = random.choice(proxys)
+fp = open('stock1.prn','r')
+pathRoot = "/root/stockSaleMonthNoCompany";
+#fp = open('stock.txt','r')
+#pathRoot = "/root/stockSaleMonth";
+stocks = fp.readlines()
+stockList = list()
+for s in stocks:
+    stockNum = "%s"%(s.strip())
+    stockList.append(stockNum)
+fp.close()
+count = 0
+for stock in stockList:
+	retryCount = 0
+	stockNum = stock
+	path="%s/%s"%(pathRoot,stockNum)
+	htmlFile="%s/salemonth_%s.html"%(path,stockNum)
+	print(path)
+	if os.path.exists(htmlFile):
+		continue
+	if not os.path.exists(path):
+	    os.makedirs(path)
+	while (retryCount < 10):
+		print(headers)
+		print(a)
+		stockUrl="https://goodinfo.tw/StockInfo/ShowSaleMonChart.asp?STOCK_ID=%s"%(stockNum)
+		print(stockUrl)
+		try:
+			p = requests.get(stockUrl, headers=headers, proxies=a,timeout=10)
+		except requests.exceptions.RequestException as e:
+			print e
+			a = random.choice(proxys)
+                        randomAgent = random.choice(httpuseragent)
+                        headers = {'User-Agent':randomAgent}
+                        retryCount+=1
+                        continue
+		p.encoding='utf-8'
+		print(p.status_code)
+		if(p.status_code == requests.codes.ok):
+			if os.path.exists(htmlFile):
+				os.remove(htmlFile)
+			print('Success')
+			fp1 = open(htmlFile,'w+')
+			fp1.write(p.text.encode('utf-8'))
+			fp1.close()
+			count+=1
+			break
+		else:
+			print('Retry')
+			a = random.choice(proxys)
+        	        randomAgent = random.choice(httpuseragent)
+	                headers = {'User-Agent':randomAgent}
+			retryCount+=1
+			continue
+	if(count==10):
+		count = 0
+		a = random.choice(proxys)
+		randomAgent = random.choice(httpuseragent)
+		headers = {'User-Agent':randomAgent}
+		time.sleep(5)
+	time.sleep(2)

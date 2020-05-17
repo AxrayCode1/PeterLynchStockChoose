@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="StockSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Stock)">
+        <MappingFragment StoreEntitySet="StockSet">
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="nameStock" ColumnName="nameStock" />
+          <ScalarProperty Name="isCompany" ColumnName="isCompany" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetsFieldsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AssetsFields)">
+        <MappingFragment StoreEntitySet="AssetsFieldsSet">
+          <ScalarProperty Name="idAssetsField" ColumnName="idAssetsField" />
+          <ScalarProperty Name="nameAssetsField" ColumnName="nameAssetsField" />
+          <ScalarProperty Name="idAssetsFieldGroup" ColumnName="idAssetsFieldGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Assets)">
+        <MappingFragment StoreEntitySet="AssetsSet">
+          <ScalarProperty Name="idAssets" ColumnName="idAssets" />
+          <ScalarProperty Name="idAssetsField" ColumnName="idAssetsField" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="percentage" ColumnName="percentage" />
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="idSession" ColumnName="idSession" />
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SessionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Session)">
+        <MappingFragment StoreEntitySet="SessionSet">
+          <ScalarProperty Name="idSession" ColumnName="idSession" />
+          <ScalarProperty Name="nameSession" ColumnName="nameSession" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetsFieldsGroupSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AssetsFieldsGroup)">
+        <MappingFragment StoreEntitySet="AssetsFieldsGroupSet">
+          <ScalarProperty Name="idAssetsFieldGroup" ColumnName="idAssetsFieldGroup" />
+          <ScalarProperty Name="nameAssetsFieldGroup" ColumnName="nameAssetsFieldGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PerformanceSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Performance)">
+        <MappingFragment StoreEntitySet="PerformanceSet">
+          <ScalarProperty Name="idPerformance" ColumnName="idPerformance" />
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="idSession" ColumnName="idSession" />
+          <ScalarProperty Name="idPeformanceField" ColumnName="idPeformanceField" />
+          <ScalarProperty Name="valuePerformance" ColumnName="valuePerformance" />
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PerformanceFieldsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.PerformanceFields)">
+        <MappingFragment StoreEntitySet="PerformanceFieldsSet">
+          <ScalarProperty Name="idPerformanceField" ColumnName="idPerformanceField" />
+          <ScalarProperty Name="namePerformanceField" ColumnName="namePerformanceField" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MonthSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Month)">
+        <MappingFragment StoreEntitySet="MonthSet">
+          <ScalarProperty Name="idMonth" ColumnName="idMonth" />
+          <ScalarProperty Name="nameMonth" ColumnName="nameMonth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleMonthSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.SaleMonth)">
+        <MappingFragment StoreEntitySet="SaleMonthSet">
+          <ScalarProperty Name="idSaleMonth" ColumnName="idSaleMonth" />
+          <ScalarProperty Name="idMonth" ColumnName="idMonth" />
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="idSaleMonthField" ColumnName="idSaleMonthField" />
+          <ScalarProperty Name="valueSaleMonth" ColumnName="valueSaleMonth" />
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleMonthFieldsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.SaleMonthFields)">
+        <MappingFragment StoreEntitySet="SaleMonthFieldsSet">
+          <ScalarProperty Name="idSaleMonthField" ColumnName="idSaleMonthField" />
+          <ScalarProperty Name="nameSaleMonthField" ColumnName="nameSaleMonthField" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Cash)">
+        <MappingFragment StoreEntitySet="CashSet">
+          <ScalarProperty Name="idCash" ColumnName="idCash" />
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="idSession" ColumnName="idSession" />
+          <ScalarProperty Name="idCashField" ColumnName="idCashField" />
+          <ScalarProperty Name="valueCash" ColumnName="valueCash" />
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashFieldsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.CashFields)">
+        <MappingFragment StoreEntitySet="CashFieldsSet">
+          <ScalarProperty Name="idCashField" ColumnName="idCashField" />
+          <ScalarProperty Name="nameCashField" ColumnName="nameCashField" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncomeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Income)">
+        <MappingFragment StoreEntitySet="IncomeSet">
+          <ScalarProperty Name="idIncome" ColumnName="idIncome" />
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="idSession" ColumnName="idSession" />
+          <ScalarProperty Name="idIncomeField" ColumnName="idIncomeField" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="percentage" ColumnName="percentage" />
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncomeFieldsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.IncomeFields)">
+        <MappingFragment StoreEntitySet="IncomeFieldsSet">
+          <ScalarProperty Name="idIncomeField" ColumnName="idIncomeField" />
+          <ScalarProperty Name="nameIncomeField" ColumnName="nameIncomeField" />
+          <ScalarProperty Name="idIncomFieldGroup" ColumnName="idIncomFieldGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncomeFieldGroupSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.IncomeFieldGroup)">
+        <MappingFragment StoreEntitySet="IncomeFieldGroupSet">
+          <ScalarProperty Name="idIncomeFieldGroup" ColumnName="idIncomeFieldGroup" />
+          <ScalarProperty Name="nameIncomeFieldGroup" ColumnName="nameIncomeFieldGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YearSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Year)">
+        <MappingFragment StoreEntitySet="YearSet">
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+          <ScalarProperty Name="nameYear" ColumnName="nameYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DividendSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Dividend)">
+        <MappingFragment StoreEntitySet="DividendSet">
+          <ScalarProperty Name="idDividend" ColumnName="idDividend" />
+          <ScalarProperty Name="idStock" ColumnName="idStock" />
+          <ScalarProperty Name="idYear" ColumnName="idYear" />
+          <ScalarProperty Name="idDividendField" ColumnName="idDividendField" />
+          <ScalarProperty Name="valueDividend" ColumnName="valueDividend" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DivendendFieldsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.DivendendFields)">
+        <MappingFragment StoreEntitySet="DivendendFieldsSet">
+          <ScalarProperty Name="idDividendField" ColumnName="idDividendField" />
+          <ScalarProperty Name="nameDividendField" ColumnName="nameDividendField" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
